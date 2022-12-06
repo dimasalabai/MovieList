@@ -12,10 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class RecyclerMovie(
-    private val context: Context, val movie: List<Poster>
+    private val context: Context, val movie: List<Poster>, val listener: OnMovieSelected
 ) : RecyclerView.Adapter<RecyclerMovie.MyHolder>() {
 
-
+    interface OnMovieSelected{
+        fun onImageSelected(movie:Poster)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val itemView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
@@ -31,6 +33,9 @@ class RecyclerMovie(
         holder.title.setText(mov.title)
         holder.genre.setText(mov.genre)
 
+        holder.image.setOnClickListener{
+            listener.onImageSelected(mov)
+        }
 
     }
 
