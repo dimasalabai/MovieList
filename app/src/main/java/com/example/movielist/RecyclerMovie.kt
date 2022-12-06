@@ -44,16 +44,17 @@ class RecyclerMovie(
     }
 
     //    Екземпляр класу
-    class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MyHolder(view: View) : RecyclerView.ViewHolder(view) {
         var image: ImageView
         var title: TextView
         var genre: TextView
 
         init {
-            image = itemView.findViewById(R.id.imageItem)
-            title = itemView.findViewById(R.id.titleItem)
-            genre = itemView.findViewById(R.id.genreItem)
+            image = view.findViewById(R.id.imageItem)
+            title = view.findViewById(R.id.titleItem)
+            genre = view.findViewById(R.id.genreItem)
         }
+
     }
 
 }

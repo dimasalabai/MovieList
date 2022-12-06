@@ -3,7 +3,7 @@ package com.example.movielist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movielist.databinding.ActivityMainBinding
@@ -45,8 +45,6 @@ class MainActivity : AppCompatActivity(), RecyclerMovie.OnMovieSelected {
             "Чорний телефон",
             "Жахи, Трилер"
         )
-
-
     )
 
 
@@ -57,7 +55,10 @@ class MainActivity : AppCompatActivity(), RecyclerMovie.OnMovieSelected {
 //        val view = binding.root
 //        setContentView(view)
         instancias()
+
     }
+
+
 
     fun instancias() {
         recycler = binding.list

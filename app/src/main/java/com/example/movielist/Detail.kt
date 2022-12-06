@@ -1,6 +1,5 @@
 package com.example.movielist
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -10,7 +9,6 @@ class Detail : AppCompatActivity() {
 
     lateinit var image:ImageView
     lateinit var img:String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
